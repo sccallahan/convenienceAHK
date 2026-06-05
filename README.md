@@ -1,6 +1,6 @@
 # AutoHotkey Controller Scripts
 
-These scripts require **AutoHotkey v2.0** and map gamepad/controller inputs to keyboard shortcuts for specific workflows.
+These scripts require **AutoHotkey v2.0**. The controller scripts map gamepad inputs to keyboard shortcuts, and the email script inserts a reusable multi-line text template.
 
 ## `pdf_controller.ahk`
 
@@ -20,7 +20,7 @@ Run the script, then open or focus Adobe Acrobat. The trigger scroll loop checks
 
 ## `roq_controller.ahk`
 
-Controller mapping for answering multiple-choice questions (specifically made with radoncquestions in mind) and navigating pages.
+Controller mapping for answering multiple-choice questions and navigating pages.
 
 | Controller input | Action |
 |---|---|
@@ -34,3 +34,13 @@ Controller mapping for answering multiple-choice questions (specifically made wi
 | D-pad down / `JoyPOV 18000` | Scrolls down |
 
 Run the script before starting the question workflow. Unlike the PDF script, these hotkeys are global and are not limited to a specific active window.
+
+## `email.ahk`
+
+Template script for inserting a reusable multi-line email body with a hotkey.
+
+| Hotkey | Action |
+|---|---|
+| `Alt` + `e` | Inserts the email template text at the cursor using `SendText` |
+
+Edit the placeholder text, such as `[Greeting]`, `[Farewell]`, and `[signature]`, before use. Run the script, place the cursor in the email or text field where you want the message inserted, then press `Alt` + `e`.
